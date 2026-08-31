@@ -1,13 +1,169 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Homem-Aranha e Jung</title>
+    <title>Blog - Análise Junguiana do Homem-Aranha</title>
 
-    <!-- Conecta o CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Reset básico e definição da paleta de cores inspirada no Homem-Aranha */
+        :root {
+            --spider-red: #E62429;       /* Vermelho clássico */
+            --spider-blue: #0B2746;      /* Azul escuro uniforme */
+            --spider-dark: #121212;      /* Preto suave para texto/fundo */
+            --spider-light: #F4F6F9;     /* Fundo claro para leitura */
+            --spider-accent: #202020;    /* Detalhes pretos/cinza */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--spider-light);
+            color: var(--spider-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* CABEÇALHO DO BLOG */
+        header {
+            /* Imagem de fundo ajustada para o cabeçalho */
+            background-image: linear-gradient(rgba(11, 39, 70, 0.8), rgba(230, 36, 41, 0.7)), url('imagem-de-fundo-1.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #FFFFFF;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 16px;
+            box-sizing: border-box;
+            border-bottom: 5px solid var(--spider-red);
+            border-radius: 0 0 12px 12px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        /* REQUISITO 1: PRIMEIRA CLASS ESTILIZADA (.subtitulo) */
+        .subtitulo {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #E0E0E0;
+            font-style: italic;
+            margin: 0;
+        }
+
+        /* CONTEÚDO PRINCIPAL DO BLOG */
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        /* REQUISITO 2: PRIMEIRA DIV ESTILIZADA (.card-autor) */
+        div.card-autor {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: #FFFFFF;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--spider-blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
+        /* REQUISITO 3: PRIMEIRA IMAGEM ESTILIZADA (Foto de Perfil) */
+        .img-perfil {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--spider-red);
+        }
+
+        /* ESTRUTURA DO ARTIGO */
+        article {
+            background-color: #FFFFFF;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        article h2 {
+            color: var(--spider-blue);
+            border-bottom: 2px solid var(--spider-red);
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        /* REQUISITO 4: SEGUNDA IMAGEM ESTILIZADA (Banner do Homem-Aranha no Artigo) */
+        .img-artigo {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #DDD;
+        }
+
+        /* REQUISITO 5: SEGUNDA CLASS ESTILIZADA (.destaque-jung) */
+        .destaque-jung {
+            font-weight: 600;
+            color: var(--spider-red);
+            background-color: rgba(230, 36, 41, 0.08);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* REQUISITO 6: SEGUNDA DIV ESTILIZADA (.card-destaque) */
+        div.card-destaque {
+            background-color: #F0F4F8;
+            border-left: 4px solid var(--spider-red);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+
+        /* ESTILIZAÇÃO DO BOTÃO DE LIKE */
+        .area-interacao {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #EEE;
+            display: flex;
+            align-items: center;
+        }
+
+        .btn-like {
+            background-color: var(--spider-red);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-like:hover {
+            background-color: #C11E23;
+            transform: scale(1.05);
+        }
+
+        .btn-like:active {
+            transform: scale(0.95);
+        }
+    </style>
 </head>
 
 <body>
@@ -19,53 +175,79 @@
 
     <main>
 
-        <div class="caixa1">
-            <h2>Meu Primeiro Post</h2>
-            <p>Por: Maria Rita</p>
-        </div>
-
-        <article>
-
-            <img src="imagens/homem-aranha.jpg" alt="Homem-Aranha">
-
-            <p>
-                Entre todos os super-heróis da cultura popular, Peter Parker talvez seja um dos que melhor representa
-                os conflitos da vida real.
-            </p>
-
-            <p>
-                Segundo Carl Jung, a <span class="destaque">persona</span> é a máscara social utilizada para nos
-                relacionarmos com o mundo.
-            </p>
-
-            <div class="caixa2">
-                <h3>Peter Parker e o Homem-Aranha</h3>
-                <p>
-                    Peter vive dividido entre sua vida comum e sua identidade heroica.
-                </p>
+        <section>
+            <div class="card-autor">
+                <img src="maria-rita.jpg" alt="Foto de Maria Rita" class="img-perfil">
+                <div>
+                    <strong>Por: Maria Rita</strong><br>
+                    <small>Publicado em Boas-Vindas ao meu novo blog!</small>
+                </div>
             </div>
+        </section>
 
-            <img src="imagens/mascara.jpg" alt="Máscara do Homem-Aranha">
+        <section>
+            <article>
+                <h2>Meu primeiro post</h2>
 
-            <p>
-                O conflito surge porque Peter não consegue separar completamente essas duas identidades.
-            </p>
+                <img src="homem-aranha-analise.jpg" alt="Ilustração do Homem-Aranha pensativo" class="img-artigo">
 
-            <p>
-                A jornada de Peter pode ser vista como um processo de
-                <span class="destaque">individuação</span>.
-            </p>
+                <p>
+                    Entre todos os super-heróis da cultura popular, Peter Parker talvez seja um dos que melhor representa os conflitos da vida real. 
+                    Muito além dos poderes extraordinários e das batalhas contra vilões, sua história é marcada por dúvidas, responsabilidades e pela difícil 
+                    tarefa de descobrir quem realmente é. Sob a ótica da psicologia de Carl Jung, a trajetória do Homem-Aranha pode ser entendida como uma jornada de 
+                    <span class="destaque-jung">individuação</span>, profundamente ligada ao conceito de persona.
+                </p>
 
-            <button class="like-btn">
-    👍 Curtir <span>0</span>
-</button>
+                <p>
+                    Para Jung, a persona é a máscara social que cada indivíduo utiliza para se relacionar com o mundo. 
+                    Ela não é necessariamente falsa, mas representa apenas uma parte de quem somos. No caso de Peter Parker, essa divisão é evidente. 
+                    Como estudante, amigo e sobrinho, ele procura ser uma pessoa comum, tentando se encaixar nas expectativas da sociedade. 
+                    Ao mesmo tempo, como Homem-Aranha, assume o papel de herói responsável pela proteção da cidade.
+                </p>
 
-        </article>
+                <div class="card-destaque">
+                    "A persona é um complicado sistema de relações entre a consciência individual e a sociedade, uma espécie de máscara destinada a causar uma determinada impressão nos outros." — C. G. Jung
+                </div>
+
+                <p>
+                    O conflito surge porque Peter não consegue separar completamente essas duas identidades. 
+                    Sua vida pessoal é constantemente afetada pelas exigências de sua vida heroica. 
+                    Ele perde compromissos, afasta pessoas importantes e frequentemente sente que não pertence totalmente a nenhum dos dois mundos. Em termos junguianos, isso ocorre porque a persona deixa de ser apenas uma máscara e passa a influenciar profundamente sua identidade.
+                </p>
+
+                <p>
+                    Em última análise, a aceitação de suas limitações e a integração do símbolo do herói ao seu "Eu" interior é o que permite a Peter Parker continuar sua caminhada. O Homem-Aranha nos ensina que equilibrar quem somos para os outros e quem somos para nós mesmos é um dos maiores desafios da jornada humana.
+                </p>
+
+                <div class="area-interacao">
+                    <button class="btn-like">
+                        ❤️ Curtir | <span>0</span>
+                    </button>
+                </div>
+
+            </article>
+        </section>
 
     </main>
 
-    <!-- Conecta o JavaScript -->
-    <script src="js/script.js"></script>
+    <script>
+        // Seleciona todos os botões com a classe btn-like
+        const botoes = document.querySelectorAll(".btn-like");
+
+        // Aplica o evento de clique baseado no código fornecido
+        botoes.forEach(function(botao) {
+            botao.addEventListener("click", botaoClicado);
+
+            function botaoClicado() {
+                console.log("fui clicado");
+                // Localiza o elemento <span> dentro do botão que contém o contador
+                let texto = botao.querySelector("span");
+                // Incrementa a contagem de curtidas
+                texto.textContent++;
+            }
+        });
+    </script>
 
 </body>
-</html> 
+
+</html>
