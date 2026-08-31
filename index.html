@@ -64,236 +64,259 @@
             font-weight: 300;
             color: #eeeeee;
             font-style: italic;
-            margin: 0;
-        }
-
-
-        /* CONTEÚDO PRINCIPAL */
-
-        main {
-            max-width: 1000px;
-            margin: 35px auto;
-            padding: 0 20px;
-        }
-
-
-        /* CARTÃO DO AUTOR */
-
-        .card-autor {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-
-            background-color: white;
-
-            padding: 18px 20px;
-
-            border-left: 6px solid var(--spider-red);
-            border-radius: 10px;
-
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-
-            margin-bottom: 25px;
-        }
-
-        .img-perfil {
-            width: 65px;
-            height: 65px;
-
-            object-fit: cover;
-
-            border-radius: 50%;
-
-            border: 3px solid var(--spider-red);
-        }
-
-        .card-autor strong {
-            font-size: 1.1rem;
-            color: var(--spider-blue);
-        }
-
-        .card-autor small {
-            color: #666;
-        }
-
-
-        /* ARTIGO */
-
-        article {
-            background-color: white;
-
-            border-radius: 12px;
-
-            padding: 30px;
-
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-
-            border-top: 5px solid var(--spider-blue);
-        }
-
-        article h2 {
-            color: var(--spider-red);
-
-            font-size: 2rem;
-
-            margin-top: 0;
-            margin-bottom: 20px;
-
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
-
-
-        /* IMAGEM DO ARTIGO */
-
-        .img-artigo {
-            width: 100%;
-            max-height: 450px;
-
-            object-fit: cover;
-
-            border-radius: 10px;
-
-            margin-bottom: 20px;
-
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-
-        /* PARÁGRAFOS */
-
-        article p {
-            font-size: 1.08rem;
-
-            line-height: 1.8;
-
-            text-align: justify;
-
-            margin-bottom: 20px;
-        }
-
-
-        /* DESTAQUE JUNG */
-
-        .destaque-jung {
-            color: var(--spider-red);
-
-            font-weight: bold;
-
-            background-color: #ffe5e5;
-
-            padding: 3px 7px;
-
-            border-radius: 5px;
-        }
-
-
-        /* CITAÇÃO */
-
-        .card-destaque {
-            background: linear-gradient(
-                135deg,
-                #0b2746,
-                #163f68
-            );
-
-            color: white;
-
-            padding: 25px;
-
-            margin: 30px 0;
-
-            border-left: 6px solid var(--spider-red);
-
-            border-radius: 8px;
-
-            font-style: italic;
-
-            line-height: 1.6;
-
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-
-        /* ÁREA DOS BOTÕES */
-
-        .area-interacao {
-            display: flex;
-
-            gap: 12px;
-
-            margin-top: 30px;
-
-            padding-top: 20px;
-
-            border-top: 2px solid #eeeeee;
-        }
-
-
-        /* BOTÕES */
-
-        .btn-like {
-            background-color: #f1f1f1;
-
-            border: 2px solid #ddd;
-
-            border-radius: 8px;
-
-            padding: 10px 18px;
-
-            font-size: 1rem;
-
-            cursor: pointer;
-
-            transition: 0.2s;
-        }
-
-        .btn-like:hover {
-            background-color: #ffe5e5;
-
-            border-color: var(--spider-red);
-
-            transform: translateY(-2px);
-        }
-
-        .btn-like span {
-            font-weight: bold;
-
-            margin-left: 5px;
-
-            color: var(--spider-blue);
-        }
-
-
-        /* RESPONSIVIDADE */
-
-        @media (max-width: 700px) {
-
-            header h1 {
-                font-size: 1.8rem;
+            margin: 0;/* VARIÁVEIS DE CORES */
             }
+:root {
+    --spider-red: #e62429;
+    --spider-blue: #0b2746;
+    --cinza: #eeeeee;
+    --branco: #ffffff;
+}
 
-            .subtitulo {
-                font-size: 1rem;
-            }
 
-            article {
-                padding: 20px;
-            }
+/* CABEÇALHO DO BLOG */
+/* MANTIDO COMO ESTAVA */
 
-            article h2 {
-                font-size: 1.5rem;
-            }
+header {
+    background-image: linear-gradient(rgba(11, 39, 70, 0.8), rgba(230, 36, 41, 0.7)), url('imagem-de-fundo-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 16px;
+    box-sizing: border-box;
+    border-bottom: 5px solid var(--spider-red);
+    border-radius: 0 0 12px 12px;
+}
 
-            article p {
-                font-size: 1rem;
-            }
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
 
-            .card-autor {
-                padding: 15px;
-            }
-        }
+.subtitulo {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #E0E0E0;
+    font-style: italic;
+    margin: 0;
+}
 
+
+/* CORPO DA PÁGINA */
+
+body {
+    margin: 0;
+    background-color: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+
+/* CARTÃO DO AUTOR */
+
+.card-autor {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background-color: white;
+
+    padding: 15px;
+
+    margin-bottom: 25px;
+
+    border-radius: 8px;
+
+    border: 1px solid #dddddd;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+/* FOTO DO AUTOR */
+
+.img-perfil {
+    width: 60px;
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid var(--spider-red);
+}
+
+
+/* NOME DO AUTOR */
+
+.card-autor strong {
+    color: var(--spider-blue);
+    font-size: 18px;
+}
+
+
+/* DATA / DESCRIÇÃO */
+
+.card-autor small {
+    color: #777777;
+}
+
+
+/* ARTIGO */
+
+article {
+    display: flex;
+
+    gap: 25px;
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    border: 1px solid #dddddd;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+/* IMAGEM DO ARTIGO */
+
+.img-artigo {
+    width: 40%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+}
+
+
+/* CONTEÚDO DO ARTIGO */
+
+article h2 {
+    color: var(--spider-red);
+
+    margin-top: 0;
+
+    font-size: 28px;
+}
+
+
+/* PARÁGRAFOS */
+
+article p {
+    line-height: 1.6;
+
+    font-size: 16px;
+
+    text-align: justify;
+}
+
+
+/* PALAVRA EM DESTAQUE */
+
+.destaque-jung {
+    color: var(--spider-red);
+
+    font-weight: bold;
+}
+
+
+/* CITAÇÃO DE JUNG */
+
+.card-destaque {
+    background-color: #eeeeee;
+
+    border-left: 5px solid var(--spider-red);
+
+    padding: 15px;
+
+    margin: 20px 0;
+
+    font-style: italic;
+
+    line-height: 1.5;
+}
+
+
+/* ÁREA DOS BOTÕES */
+
+.area-interacao {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+/* BOTÕES */
+
+.btn-like {
+    background-color: white;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 5px;
+
+    padding: 8px 15px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.btn-like:hover {
+    background-color: #eeeeee;
+
+    border-color: var(--spider-red);
+}
+
+
+/* NÚMERO DE CURTIDAS */
+
+.btn-like span {
+    font-weight: bold;
+
+    margin-left: 4px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+
+    article {
+        display: block;
+    }
+
+    .img-artigo {
+        width: 100%;
+        height: 250px;
+        margin-bottom: 15px;
+    }
+
+}
     </style>
 </head>
 
