@@ -7,181 +7,99 @@
     <title>Blog - Análise Junguiana do Homem-Aranha</title>
 
     <style>
-        /* Paleta de cores extraída do design da imagem */
-:root {
-    --bg-red: #8B0000;          /* Vermelho de fundo principal (Deep Red) */
-    --card-dark: #1A1A1A;        /* Fundo escuro dos cards de conteúdo */
-    --spider-blue: #0055A5;      /* Azul vibrante dos detalhes/botões */
-    --text-light: #FFFFFF;       /* Texto em branco */
-    --text-muted: #B0B0B0;       /* Texto secundário em cinza */
-    --accent-red: #D10000;       /* Vermelho de destaque */
-}
-
-/* Configurações Globais */
+        /* Cores do Homem-Aranha */
 body {
-    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-red);
-    color: var(--text-light);
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    background-color: darkred;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 20px;
 }
 
-/* CABEÇALHO (Estilo Barra Superior Minimalista) */
+/* Cabeçalho */
 header {
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px);
-    color: var(--text-light);
+    background-color: black;
     text-align: center;
-    max-width: 1000px;
-    margin: 20px auto 0 auto;
-    padding: 30px 20px;
-    box-sizing: border-box;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 header h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
-    text-transform: uppercase;
+    color: red;
 }
 
-/* REQUISITO: FIRST CLASS ESTILIZADA (.subtitulo) */
+/* REQUISITO: PRIMEIRA CLASS ESTILIZADA (.subtitulo) */
 .subtitulo {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0;
+    color: lightgray;
+    font-style: italic;
 }
 
-/* CONTEÚDO PRINCIPAL */
+/* Conteúdo */
 main {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 0 16px;
-    box-sizing: border-box;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* REQUISITO: FIRST DIV ESTILIZADA (.card-autor) */
+/* REQUISITO: PRIMEIRA DIV ESTILIZADA (.card-autor) */
 div.card-autor {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background-color: var(--card-dark);
-    padding: 14px 24px;
-    border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    margin-bottom: 30px;
-    width: fit-content;
+    background-color: #222;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
 }
 
-/* REQUISITO: FIRST IMAGE ESTILIZADA (.img-perfil) */
+/* REQUISITO: PRIMEIRA IMAGEM ESTILIZADA (.img-perfil) */
 .img-perfil {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--spider-blue);
 }
 
-/* ARTIGO PRINCIPAL (Estilo Banner Escuro) */
+/* Artigo Principal */
 article {
-    background-color: var(--card-dark);
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid red;
 }
 
 article h2 {
-    color: var(--text-light);
-    font-size: 1.8rem;
-    font-weight: 700;
-    border-bottom: 3px solid var(--spider-blue);
-    padding-bottom: 10px;
-    margin-top: 0;
-    display: inline-block;
+    color: dodgerblue;
 }
 
-/* REQUISITO: SECOND IMAGE ESTILIZADA (.img-artigo) */
+/* REQUISITO: SEGUNDA IMAGEM ESTILIZADA (.img-artigo) */
 .img-artigo {
     width: 100%;
-    max-height: 420px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin: 25px 0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
 }
 
-article p {
-    color: #E0E0E0;
-    font-size: 1.05rem;
-    margin-bottom: 20px;
-}
-
-/* REQUISITO: SECOND CLASS ESTILIZADA (.destaque-jung) */
+/* REQUISITO: SEGUNDA CLASS ESTILIZADA (.destaque-jung) */
 .destaque-jung {
-    font-weight: 700;
-    color: #FFFFFF;
-    background-color: var(--spider-blue);
-    padding: 3px 8px;
-    border-radius: 4px;
-    letter-spacing: 0.5px;
+    color: yellow;
+    font-weight: bold;
 }
 
-/* REQUISITO: SECOND DIV ESTILIZADA (.card-destaque) */
+/* REQUISITO: SEGUNDA DIV ESTILIZADA (.card-destaque) */
 div.card-destaque {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-left: 5px solid var(--accent-red);
-    padding: 20px 25px;
-    margin: 30px 0;
-    border-radius: 0 12px 12px 0;
-    font-style: italic;
-    color: #F0F0F0;
-    font-size: 1.1rem;
+    background-color: #333;
+    padding: 15px;
+    border-left: 4px solid dodgerblue;
+    margin: 15px 0;
 }
 
-/* ÁREA DO BOTÃO DE LIKE */
-.area-interacao {
-    margin-top: 35px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: flex-end;
-}
-
+/* Botão de Curtir */
 .btn-like {
-    background-color: var(--spider-blue);
-    color: var(--text-light);
+    background-color: red;
+    color: white;
     border: none;
-    padding: 12px 28px;
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 30px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 85, 165, 0.4);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 10px;
 }
 
 .btn-like:hover {
-    background-color: #0066CC;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 85, 165, 0.6);
-}
-
-.btn-like:active {
-    transform: translateY(0);
+    background-color: darkred;
 }
     </style>
 </head>
