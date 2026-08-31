@@ -7,162 +7,182 @@
     <title>Blog - Análise Junguiana do Homem-Aranha</title>
 
     <style>
-        /* Reset básico e definição da paleta de cores inspirada no Homem-Aranha */
-        :root {
-            --spider-red: #E62429;       /* Vermelho clássico */
-            --spider-blue: #0B2746;      /* Azul escuro uniforme */
-            --spider-dark: #121212;      /* Preto suave para texto/fundo */
-            --spider-light: #F4F6F9;     /* Fundo claro para leitura */
-            --spider-accent: #202020;    /* Detalhes pretos/cinza */
-        }
+        /* Paleta de cores extraída do design da imagem */
+:root {
+    --bg-red: #8B0000;          /* Vermelho de fundo principal (Deep Red) */
+    --card-dark: #1A1A1A;        /* Fundo escuro dos cards de conteúdo */
+    --spider-blue: #0055A5;      /* Azul vibrante dos detalhes/botões */
+    --text-light: #FFFFFF;       /* Texto em branco */
+    --text-muted: #B0B0B0;       /* Texto secundário em cinza */
+    --accent-red: #D10000;       /* Vermelho de destaque */
+}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--spider-light);
-            color: var(--spider-dark);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
+/* Configurações Globais */
+body {
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-red);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
 
-        /* CABEÇALHO DO BLOG */
-        header {
-            /* Imagem de fundo ajustada para o cabeçalho */
-            background-image: linear-gradient(rgba(11, 39, 70, 0.8), rgba(230, 36, 41, 0.7)), url('imagem-de-fundo-1.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            color: #FFFFFF;
-            text-align: center;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 16px;
-            box-sizing: border-box;
-            border-bottom: 5px solid var(--spider-red);
-            border-radius: 0 0 12px 12px;
-        }
+/* CABEÇALHO (Estilo Barra Superior Minimalista) */
+header {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    color: var(--text-light);
+    text-align: center;
+    max-width: 1000px;
+    margin: 20px auto 0 auto;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
 
-        header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 8px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        }
+header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
 
-        /* REQUISITO 1: PRIMEIRA CLASS ESTILIZADA (.subtitulo) */
-        .subtitulo {
-            font-size: 1.2rem;
-            font-weight: 300;
-            color: #E0E0E0;
-            font-style: italic;
-            margin: 0;
-        }
+/* REQUISITO: FIRST CLASS ESTILIZADA (.subtitulo) */
+.subtitulo {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
 
-        /* CONTEÚDO PRINCIPAL DO BLOG */
-        main {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 16px;
-            box-sizing: border-box;
-        }
+/* CONTEÚDO PRINCIPAL */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
 
-        /* REQUISITO 2: PRIMEIRA DIV ESTILIZADA (.card-autor) */
-        div.card-autor {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            background-color: #FFFFFF;
-            padding: 12px 20px;
-            border-radius: 8px;
-            border-left: 5px solid var(--spider-blue);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            margin-bottom: 25px;
-        }
+/* REQUISITO: FIRST DIV ESTILIZADA (.card-autor) */
+div.card-autor {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--card-dark);
+    padding: 14px 24px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+    width: fit-content;
+}
 
-        /* REQUISITO 3: PRIMEIRA IMAGEM ESTILIZADA (Foto de Perfil) */
-        .img-perfil {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--spider-red);
-        }
+/* REQUISITO: FIRST IMAGE ESTILIZADA (.img-perfil) */
+.img-perfil {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--spider-blue);
+}
 
-        /* ESTRUTURA DO ARTIGO */
-        article {
-            background-color: #FFFFFF;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
+/* ARTIGO PRINCIPAL (Estilo Banner Escuro) */
+article {
+    background-color: var(--card-dark);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
 
-        article h2 {
-            color: var(--spider-blue);
-            border-bottom: 2px solid var(--spider-red);
-            padding-bottom: 8px;
-            margin-top: 0;
-        }
+article h2 {
+    color: var(--text-light);
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-bottom: 3px solid var(--spider-blue);
+    padding-bottom: 10px;
+    margin-top: 0;
+    display: inline-block;
+}
 
-        /* REQUISITO 4: SEGUNDA IMAGEM ESTILIZADA (Banner do Homem-Aranha no Artigo) */
-        .img-artigo {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin: 20px 0;
-            border: 1px solid #DDD;
-        }
+/* REQUISITO: SECOND IMAGE ESTILIZADA (.img-artigo) */
+.img-artigo {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 25px 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
 
-        /* REQUISITO 5: SEGUNDA CLASS ESTILIZADA (.destaque-jung) */
-        .destaque-jung {
-            font-weight: 600;
-            color: var(--spider-red);
-            background-color: rgba(230, 36, 41, 0.08);
-            padding: 2px 6px;
-            border-radius: 4px;
-        }
+article p {
+    color: #E0E0E0;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+}
 
-        /* REQUISITO 6: SEGUNDA DIV ESTILIZADA (.card-destaque) */
-        div.card-destaque {
-            background-color: #F0F4F8;
-            border-left: 4px solid var(--spider-red);
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-            font-style: italic;
-        }
+/* REQUISITO: SECOND CLASS ESTILIZADA (.destaque-jung) */
+.destaque-jung {
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: var(--spider-blue);
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
 
-        /* ESTILIZAÇÃO DO BOTÃO DE LIKE */
-        .area-interacao {
-            margin-top: 30px;
-            padding-top: 15px;
-            border-top: 1px solid #EEE;
-            display: flex;
-            align-items: center;
-        }
+/* REQUISITO: SECOND DIV ESTILIZADA (.card-destaque) */
+div.card-destaque {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left: 5px solid var(--accent-red);
+    padding: 20px 25px;
+    margin: 30px 0;
+    border-radius: 0 12px 12px 0;
+    font-style: italic;
+    color: #F0F0F0;
+    font-size: 1.1rem;
+}
 
-        .btn-like {
-            background-color: var(--spider-red);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+/* ÁREA DO BOTÃO DE LIKE */
+.area-interacao {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: flex-end;
+}
 
-        .btn-like:hover {
-            background-color: #C11E23;
-            transform: scale(1.05);
-        }
+.btn-like {
+    background-color: var(--spider-blue);
+    color: var(--text-light);
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 85, 165, 0.4);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-        .btn-like:active {
-            transform: scale(0.95);
-        }
+.btn-like:hover {
+    background-color: #0066CC;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 85, 165, 0.6);
+}
+
+.btn-like:active {
+    transform: translateY(0);
+}
     </style>
 </head>
 
