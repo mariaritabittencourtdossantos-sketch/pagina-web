@@ -1,72 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-bt">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-   
+    <title>Blog - Homem-Aranha e Jung</title>
+
+    <!-- Conecta o CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
- <style>
-        
-       header {
-  background-image: url('imagem-de-fundo-1.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #0B2746;
-            text-align: center;
-            max-width: 1000px ;
-            margin: 0 auto; 
-            padding: 16px; 
-  
-  height: 250px; /* Define a altura do cabeçalho */
-  width: 100%;    /* Garante que ocupe toda a largura */
+<body>
 
-}
-
-
-
-        
-        main { 
-            color: #000000;
-            max-width: 1000px ;
-            margin: 0 auto; 
-            padding: 16px;
-            
-            }
-    </style> 
-    
-    </head>
-    <body>
-        <header> 
-        <h1>Peter Parker, a Persona e a Busca por Si Mesmo</h1> 
-        
-        <p class="É">Uma Análise Junguiana do Homem-Aranha</p>
-        </header>
+    <header>
+        <h1>Peter Parker, a Persona e a Busca por Si Mesmo</h1>
+        <p class="subtitulo">Uma Análise Junguiana do Homem-Aranha</p>
+    </header>
 
     <main>
-        <p> </p> 
-        <h2>Meu primeiro post</h2>
-        <p>Por: Maria Rita</p>
-        <p>Boas-Vindas ao meu novo blog!</p>   
-        <P>Entre todos os super-heróis da cultura popular, Peter Parker talvez seja um dos que melhor representa os conflitos da vida real. 
-            Muito além dos poderes extraordinários e das batalhas contra vilões, sua história é marcada por dúvidas, responsabilidades e pela difícil 
-            tarefa de descobrir quem realmente é. Sob a ótica da psicologia de Carl Jung, a trajetória do Homem-Aranha pode ser entendida como uma jornada de
-             individuação, profundamente ligada ao conceito de persona.</P>
-             <br>
-             <p>Para Jung, a persona é a máscara social que cada indivíduo utiliza para se relacionar com o mundo.
-                 Ela não é necessariamente falsa, mas representa apenas uma parte de quem somos. No caso de Peter Parker, essa divisão é evidente. 
-                 Como estudante, amigo e sobrinho, ele procura ser uma pessoa comum, tentando se encaixar nas expectativas da sociedade. 
-                 Ao mesmo tempo, como Homem-Aranha, assume o papel de herói responsável pela proteção da cidade.</p>
-                 <br>
-                 <p>O conflito surge porque Peter não consegue separar completamente essas duas identidades. 
-                    Sua vida pessoal é constantemente afetada pelas exigências de sua vida heroica.
-                     Ele perde compromissos, afasta pessoas importantes e frequentemente sente que não pertence totalmente a nenhum dos dois mundos. Em termos junguianos, isso ocorre porque a persona deixa de ser apenas uma máscara e passa a influenciar profundamente sua identidade.</p>
-       
+
+        <div class="caixa1">
+            <h2>Meu Primeiro Post</h2>
+            <p>Por: Maria Rita</p>
+        </div>
+
+        <article>
+
+            <img src="imagens/homem-aranha.jpg" alt="Homem-Aranha">
+
+            <p>
+                Entre todos os super-heróis da cultura popular, Peter Parker talvez seja um dos que melhor representa
+                os conflitos da vida real.
+            </p>
+
+            <p>
+                Segundo Carl Jung, a <span class="destaque">persona</span> é a máscara social utilizada para nos
+                relacionarmos com o mundo.
+            </p>
+
+            <div class="caixa2">
+                <h3>Peter Parker e o Homem-Aranha</h3>
+                <p>
+                    Peter vive dividido entre sua vida comum e sua identidade heroica.
+                </p>
+            </div>
+
+            <img src="imagens/mascara.jpg" alt="Máscara do Homem-Aranha">
+
+            <p>
+                O conflito surge porque Peter não consegue separar completamente essas duas identidades.
+            </p>
+
+            <p>
+                A jornada de Peter pode ser vista como um processo de
+                <span class="destaque">individuação</span>.
+            </p>
+
+            <button class="like-btn">
+    👍 Curtir <span>0</span>
+</button>
+
+        </article>
+
     </main>
 
-</body>
+    <!-- Conecta o JavaScript -->
+    <script src="js/script.js"></script>
 
-</html>
+</body>
+</html> 

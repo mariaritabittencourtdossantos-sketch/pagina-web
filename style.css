@@ -1,26 +1,77 @@
+/* Estilo geral do site */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+}
+
+/* Cabeçalho */
 header {
-  background-image: url('imagem-de-fundo-1.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #0B2746;
-            text-align: center;
-            max-width: 1000px ;
-            margin: 0 auto; 
-            padding: 16px; 
-  
-  height: 250px; /* Define a altura do cabeçalho */
-  width: 100%;    /* Garante que ocupe toda a largura */
-
+    background-color: #C1121F;
+    color: white;
+    text-align: center;
+    padding: 30px;
 }
 
-h1{
-  color:azure; 
-  
+/* Classe 1 */
+.subtitulo {
+    color: #FFD60A;
+    font-size: 20px;
 }
 
-.É {
-color: aliceblue;
- max-width: 20PX;
-font-weight: bold ;
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Div estilizada 1 */
+.caixa1 {
+    background-color: #0B2746;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Div estilizada 2 */
+.caixa2 {
+    background-color: #C1121F;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Classe 2 */
+.destaque {
+    color: #FFD60A;
+    font-weight: bold;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+article {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #0B2746;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #163f6e;
 }
