@@ -1,6 +1,10 @@
-.teste {
+header {
+  background-image: url('imagem-de-fundo-1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  height: 250px; /* Define a altura do cabeçalho */
+  width: 100%;    /* Garante que ocupe toda a largura */
 
-background-color: bisque;
-border: 2;
-
- }
+}
