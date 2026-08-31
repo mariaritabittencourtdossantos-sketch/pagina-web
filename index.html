@@ -7,100 +7,162 @@
     <title>Blog - Análise Junguiana do Homem-Aranha</title>
 
     <style>
-        /* Cores do Homem-Aranha */
-body {
-    background-color: darkred;
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
+        /* Reset básico e definição da paleta de cores inspirada no Homem-Aranha */
+        :root {
+            --spider-red: #E62429;       /* Vermelho clássico */
+            --spider-blue: #0B2746;      /* Azul escuro uniforme */
+            --spider-dark: #121212;      /* Preto suave para texto/fundo */
+            --spider-light: #F4F6F9;     /* Fundo claro para leitura */
+            --spider-accent: #202020;    /* Detalhes pretos/cinza */
+        }
 
-/* Cabeçalho */
-header {
-    background-color: black;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--spider-light);
+            color: var(--spider-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
 
-header h1 {
-    color: red;
-}
+        /* CABEÇALHO DO BLOG */
+        header {
+            /* Imagem de fundo ajustada para o cabeçalho */
+            background-image: linear-gradient(rgba(11, 39, 70, 0.8), rgba(230, 36, 41, 0.7)), url('imagem-de-fundo-1.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #FFFFFF;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 16px;
+            box-sizing: border-box;
+            border-bottom: 5px solid var(--spider-red);
+            border-radius: 0 0 12px 12px;
+        }
 
-/* REQUISITO: PRIMEIRA CLASS ESTILIZADA (.subtitulo) */
-.subtitulo {
-    color: lightgray;
-    font-style: italic;
-}
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
 
-/* Conteúdo */
-main {
-    max-width: 800px;
-    margin: 0 auto;
-}
+        /* REQUISITO 1: PRIMEIRA CLASS ESTILIZADA (.subtitulo) */
+        .subtitulo {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #E0E0E0;
+            font-style: italic;
+            margin: 0;
+        }
 
-/* REQUISITO: PRIMEIRA DIV ESTILIZADA (.card-autor) */
-div.card-autor {
-    background-color: #222;
-    padding: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-}
+        /* CONTEÚDO PRINCIPAL DO BLOG */
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 16px;
+            box-sizing: border-box;
+        }
 
-/* REQUISITO: PRIMEIRA IMAGEM ESTILIZADA (.img-perfil) */
-.img-perfil {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
+        /* REQUISITO 2: PRIMEIRA DIV ESTILIZADA (.card-autor) */
+        div.card-autor {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: #FFFFFF;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--spider-blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
 
-/* Artigo Principal */
-article {
-    background-color: #111;
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid red;
-}
+        /* REQUISITO 3: PRIMEIRA IMAGEM ESTILIZADA (Foto de Perfil) */
+        .img-perfil {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--spider-red);
+        }
 
-article h2 {
-    color: dodgerblue;
-}
+        /* ESTRUTURA DO ARTIGO */
+        article {
+            background-color: #FFFFFF;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
 
-/* REQUISITO: SEGUNDA IMAGEM ESTILIZADA (.img-artigo) */
-.img-artigo {
-    width: 100%;
-    border-radius: 8px;
-}
+        article h2 {
+            color: var(--spider-blue);
+            border-bottom: 2px solid var(--spider-red);
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
 
-/* REQUISITO: SEGUNDA CLASS ESTILIZADA (.destaque-jung) */
-.destaque-jung {
-    color: yellow;
-    font-weight: bold;
-}
+        /* REQUISITO 4: SEGUNDA IMAGEM ESTILIZADA (Banner do Homem-Aranha no Artigo) */
+        .img-artigo {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #DDD;
+        }
 
-/* REQUISITO: SEGUNDA DIV ESTILIZADA (.card-destaque) */
-div.card-destaque {
-    background-color: #333;
-    padding: 15px;
-    border-left: 4px solid dodgerblue;
-    margin: 15px 0;
-}
+        /* REQUISITO 5: SEGUNDA CLASS ESTILIZADA (.destaque-jung) */
+        .destaque-jung {
+            font-weight: 600;
+            color: var(--spider-red);
+            background-color: rgba(230, 36, 41, 0.08);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
 
-/* Botão de Curtir */
-.btn-like {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        /* REQUISITO 6: SEGUNDA DIV ESTILIZADA (.card-destaque) */
+        div.card-destaque {
+            background-color: #F0F4F8;
+            border-left: 4px solid var(--spider-red);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
 
-.btn-like:hover {
-    background-color: darkred;
-}
+        /* ESTILIZAÇÃO DO BOTÃO DE LIKE */
+        .area-interacao {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #EEE;
+            display: flex;
+            align-items: center;
+        }
+
+        .btn-like {
+            background-color: var(--spider-red);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-like:hover {
+            background-color: #C11E23;
+            transform: scale(1.05);
+        }
+
+        .btn-like:active {
+            transform: scale(0.95);
+        }
     </style>
 </head>
 
