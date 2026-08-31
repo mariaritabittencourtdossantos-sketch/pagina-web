@@ -1,71 +1,248 @@
- <!DOCTYPE html>
+ ```html
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Homem-Aranha e Jung</title>
 
-    <!-- Conecta o CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <title>Peter Parker, a Persona e a Busca por Si Mesmo</title>
+
+    <style>
+
+        /* Estilização geral da página */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eaf2f8;
+            color: #000000;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-image: url('imagem-de-fundo-1.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            color: #0B2746;
+            text-align: center;
+
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 16px;
+
+            height: 250px;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        /* Classe usada no subtítulo */
+        .subtitulo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Conteúdo principal */
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 25px;
+        }
+
+        /* Área do artigo */
+        article {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            color: #0B2746;
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        /* Imagens */
+        .imagem {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        /* Vídeo */
+        video {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+            margin: 25px auto;
+            border-radius: 10px;
+        }
+
+        /* Área do Like */
+        .like-area {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        button {
+            background-color: #d62828;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #a91f1f;
+        }
+
+        #contador {
+            font-weight: bold;
+            margin-left: 8px;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            background-color: #0B2746;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+    </style>
 </head>
 
 <body>
 
+    <!-- Cabeçalho do blog -->
     <header>
         <h1>Peter Parker, a Persona e a Busca por Si Mesmo</h1>
-        <p class="subtitulo">Uma Análise Junguiana do Homem-Aranha</p>
+
+        <p class="subtitulo">
+            Uma Análise Junguiana do Homem-Aranha
+        </p>
     </header>
 
     <main>
 
-        <div class="caixa1">
-            <h2>Meu Primeiro Post</h2>
+        <!-- Primeira div: informações do post -->
+        <div>
             <p>Por: Maria Rita</p>
+
+            <h2>Meu primeiro post</h2>
         </div>
 
+        <!-- Artigo principal -->
         <article>
 
-            <img src="imagens/homem-aranha.jpg" alt="Homem-Aranha">
-
             <p>
-                Entre todos os super-heróis da cultura popular, Peter Parker talvez seja um dos que melhor representa
-                os conflitos da vida real.
+                Boas-vindas ao meu novo blog! Entre todos os super-heróis da cultura popular,
+                Peter Parker talvez seja um dos que melhor representa os conflitos da vida real.
+                Muito além dos poderes extraordinários e das batalhas contra vilões, sua história
+                é marcada por dúvidas, responsabilidades e pela difícil tarefa de descobrir quem
+                realmente é.
             </p>
 
+            <!-- Primeira imagem -->
+            <img class="imagem" src="homem-aranha-1.jpg" alt="Homem-Aranha">
+
             <p>
-                Segundo Carl Jung, a <span class="destaque">persona</span> é a máscara social utilizada para nos
-                relacionarmos com o mundo.
+                Para Jung, a persona é a máscara social que cada indivíduo utiliza para se
+                relacionar com o mundo. Ela não é necessariamente falsa, mas representa apenas
+                uma parte de quem somos. No caso de Peter Parker, essa divisão é evidente.
+                Como estudante, amigo e sobrinho, ele procura ser uma pessoa comum, tentando
+                se encaixar nas expectativas da sociedade.
             </p>
 
-            <div class="caixa2">
-                <h3>Peter Parker e o Homem-Aranha</h3>
+            <!-- Segunda div: destaque sobre o Homem-Aranha -->
+            <div>
+                <h2>Peter Parker e sua Persona</h2>
+
                 <p>
-                    Peter vive dividido entre sua vida comum e sua identidade heroica.
+                    Ao mesmo tempo, como Homem-Aranha, Peter assume o papel de herói responsável
+                    pela proteção da cidade. O conflito surge porque ele não consegue separar
+                    completamente essas duas identidades. Sua vida pessoal é constantemente
+                    afetada pelas exigências de sua vida heroica.
                 </p>
             </div>
 
-            <img src="imagens/mascara.jpg" alt="Máscara do Homem-Aranha">
+            <!-- Segunda imagem -->
+            <img class="imagem" src="homem-aranha-2.jpg" alt="Peter Parker como Homem-Aranha">
 
             <p>
-                O conflito surge porque Peter não consegue separar completamente essas duas identidades.
+                Sob a ótica da psicologia de Carl Jung, essa situação pode ser relacionada ao
+                processo de individuação. A individuação representa o caminho de desenvolvimento
+                pelo qual uma pessoa busca compreender diferentes partes de si mesma e construir
+                uma identidade mais integrada. Peter precisa aprender que não precisa escolher
+                entre ser Peter Parker ou ser o Homem-Aranha: ambas as partes fazem parte de quem
+                ele é.
             </p>
 
-            <p>
-                A jornada de Peter pode ser vista como um processo de
-                <span class="destaque">individuação</span>.
-            </p>
+            <!-- Vídeo -->
+            <video controls>
+                <source src="homem-aranha.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
 
-            <button onclick="curtir()">
-                👍 Curtir <span id="likes">0</span>
-            </button>
+            <!-- Área do botão de Like -->
+            <div class="like-area">
+
+                <button id="likeButton">
+                    ❤️ Curtir
+                    <span id="contador">0</span>
+                </button>
+
+            </div>
 
         </article>
 
     </main>
 
-    <!-- Conecta o JavaScript -->
-    <script src="script.js"></script>
+    <!-- Rodapé -->
+    <footer>
+        <p>Blog de Psicologia e Cultura Pop — Maria Rita</p>
+    </footer>
+
+
+    <!-- JavaScript do botão de Like -->
+    <script>
+
+        let botao = document.getElementById("likeButton");
+        let contador = document.getElementById("contador");
+
+        let likes = 0;
+
+        botao.addEventListener("click", function() {
+
+            likes++;
+
+            contador.textContent = likes;
+
+        });
+
+    </script>
 
 </body>
+
 </html>
+```
