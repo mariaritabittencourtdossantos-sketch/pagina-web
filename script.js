@@ -1,9 +1,8 @@
-botoes.forEach(function(botao) {
-    botao.addEventListener("click", botaoClicado);
+// Contador de curtidas
 
-    function botaoClicado() {
-        console.log("fui clicado");
-        let texto = botao.querySelector("span");
-        texto.textContent++;
-    }
-});
+let contador = 0;
+
+function curtir() {
+    contador++;
+    document.getElementById("likes").innerHTML = contador;
+}
