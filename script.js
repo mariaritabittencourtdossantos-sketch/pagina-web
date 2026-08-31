@@ -1,12 +1,11 @@
-et botao = document.getElementById("likeButton");
-        let contador = document.getElementById("contador");
+let botao = document.getElementById("likeButton");
 
-        let likes = 0;
+botao.addEventListener("click", botaoClicado);
 
-        botao.addEventListener("click", function() {
+function botaoClicado() {
+    console.log("fui clicado");
 
-            likes++;
+    let texto = document.getElementById("contador");
 
-            contador.textContent = likes;
-
-        });
+    texto.textContent++;
+}
