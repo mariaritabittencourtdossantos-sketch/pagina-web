@@ -26,7 +26,7 @@ script.js
 Arquivo responsável pela parte interativa do site, como o funcionamento do botão "Curtir" e do contador de curtidas.
 
 Imagens
-O projeto utiliza duas imagens relacionadas ao Homem-Aranha para complementar visualmente o conteúdo do artigo.
+O projeto utiliza três imagens relacionadas ao Homem-Aranha para complementar visualmente o conteúdo do artigo. 
 
 
 interatividade
@@ -35,6 +35,6 @@ O blog possui um botão de curtida:
 Ao clicar no botão, o JavaScript altera o contador de curtidas, tornando a página mais interativa.
 
 🎥 Vídeo
-O site também apresenta um vídeo incorporado do YouTube que serviu como inspiração para estabelecer a relação entre Peter Parker e a filosofia de Carl Jung.
+O site também apresenta um vídeo incorporado do YouTube que serviu como inspiração para estabelecer a relação entre Peter Parker e a filosofia de Carl Jung. O vídeo é de autoria do canal: "Kyeøruh"
 
 Autora: Maria Rita
